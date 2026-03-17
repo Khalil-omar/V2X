@@ -142,7 +142,6 @@ rviz2
   apt install tmuxinator
   ``` 
   Rename ***auto_start.yml*** file as `.tmuxinator.yml`  
-  Replace `<container_name>` with your specific ***docker container*** name in auto_start file.
   ```bash
   tmuxinator start
   ```
