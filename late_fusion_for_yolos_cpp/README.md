@@ -1,8 +1,3 @@
-# late_fusion_for_yolos_cpp
-
-Multi-camera YOLO Detection2D and debug image fusion node for ROS 2 (Jazzy).
-This is a add-on part of my previous repository "https://github.com/Pavankumarsp02/ros2_yolos_cpp.git"
-
 This package fuses:
 - vision_msgs/msg/Detection2DArray
 - sensor_msgs/msg/Image (debug images)
@@ -41,40 +36,6 @@ DEPENDENCIES
 Install cv_bridge if needed:
 
   sudo apt install ros-jazzy-cv-bridge
-
-
-------------------------------------------------------------
-USAGE
-------------------------------------------------------------
-
-1) Clone into your ROS 2 workspace:
-```
-  cd ~/ros2_ws/src
-  git clone https://github.com/Pavankumarsp02/late_fusion_for_yolos_cpp.git
-```
-2) Build the workspace:
-```
-  cd ~/ros2_ws
-  colcon build --package-select late_fusion_for_yolos_cpp
-```
-3) Source the workspace:
-```
-  source /opt/ros/jazzy/setup.bash
-  source ~/ros2_ws/install/setup.bash
-```
-4) Launch fusion:
-```
-  ros2 launch late_fusion_for_yolos_cpp launch_fusion_node.py
-```
-5) Ensure YOLO detectors are active (if using ros2_yolos_cpp lifecycle nodes):
-```
-  ros2 lifecycle set /yolos_detector1 activate
-  ros2 lifecycle set /yolos_detector2 activate
-  ros2 lifecycle set /yolos_detector3 activate
-  ros2 lifecycle set /yolos_detector4 activate
-  ros2 lifecycle set /yolos_detector5 activate
-  ros2 lifecycle set /yolos_detector6 activate
-```
 
 ------------------------------------------------------------
 PARAMETERS
@@ -119,9 +80,3 @@ DETECTION FUSION LOGIC
     header.stamp = now()
 
 This is append-only aggregation, not geometric or semantic fusion.
-
-------------------------------------------------------------
-LICENSE
-------------------------------------------------------------
-
-Apache-2.0
