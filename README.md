@@ -11,6 +11,14 @@ The system operates in a sequential pipeline:
 * Perception (ros2_yolos_cpp): Processes raw camera feeds to perform real-time YOLO object detection.
 * Stitching (late_fusion_for_yolos_cpp): Collects the processed frames from multiple cameras and fuses them into a single panoramic view.
 
+## Features
+- Supports 1-6 cameras
+- Fresh-only detection fusion (no reuse across cycles)
+- 2x3 image stitching layout
+- Fully parameterized via YAML
+- Compatible with ros2_yolos_cpp
+- Designed for ROS 2 Jazzy
+
 ## Repository Structure
 **1\.** **ros2_yolos_cpp**
 This package is responsible for the initial object detection phase. 
@@ -45,6 +53,7 @@ This package handles the "Late Fusion" or panoramic stitching of the detected ou
 
 ## 🎬 Panoramic stitched image sample from Rviz
 <img src="late_fusion_for_yolos_cpp/assets/Fused_Rviz_view.gif">
+
 
 ## Getting Started  
 Prerequisites
