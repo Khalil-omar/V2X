@@ -127,11 +127,11 @@ ros2 launch ros2_yolos_cpp detector4.launch.py \
 ```
 Terminal 4: (Configuring and Activating yolo nodes)
 ```bash
-ros2 lifecycle set /yolos_detector2 configure \
-ros2 lifecycle set /yolos_detector3 configure \
-ros2 lifecycle set /yolos_detector4 configure \
-ros2 lifecycle set /yolos_detector2 activate \
-ros2 lifecycle set /yolos_detector3 activate \
+ros2 lifecycle set /yolos_detector2 configure
+ros2 lifecycle set /yolos_detector3 configure
+ros2 lifecycle set /yolos_detector4 configure
+ros2 lifecycle set /yolos_detector2 activate
+ros2 lifecycle set /yolos_detector3 activate
 ros2 lifecycle set /yolos_detector4 activate
 ```
 Terminal 5: (Enabling Late Fusion Node)
